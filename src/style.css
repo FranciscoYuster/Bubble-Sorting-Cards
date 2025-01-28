@@ -1,0 +1,50 @@
+body {
+    background: #1ea85e;
+    h4{ margin: 10px;}
+    input{ width: 30px; margin-right: 5px; }
+  }
+  #logo{position: fixed; right: 10px; top: 10px;}
+  .solution-log{
+    margin: 0; padding: 0;
+    li{ margin: 0; padding: 0; list-style: none; margin-left: 10px;}
+    li:hover{ background: #89e59c; }
+    li i{float: left; line-height:50px; width: 10px;}
+  }
+  .deck {
+    display: flex;
+    padding: 5px;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  
+  .card {
+    width: 40px;
+    background: white;
+    margin: 0px 5px;
+    height: 50px;
+    font-size: 10px;
+    position: relative;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    span{ font-size: 110%; }
+    &.heart,&.diamond{ color: red; }
+    &.club,&.spade{ color: black; }
+    &.heart::before,&.heart::after{ content: "♡"; }
+    &.diamond::before,&.diamond::after{ content: "♢"; }
+    &.club::before,&.club::after{ content: "♧"; }
+    &.spade::before,&.spade::after{ content: "♤"; }
+    &::before{
+      position: absolute;
+      top: -15px;
+      left: 3px;
+    }	
+    &::after {
+      position: absolute;
+      bottom: -15px;
+      right: 3px;
+      transform: rotate(180deg);
+    }	
+    
+  }
